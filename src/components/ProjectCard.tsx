@@ -23,7 +23,8 @@ export function ProjectCard({ title, description, icon: Icon, index, images, ful
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="group relative flex flex-col rounded-2xl border border-slate-200 bg-white p-8 shadow-lg transition-all hover:border-orange-200 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900 dark:hover:border-orange-800 h-full"
+                onClick={() => fullDescription && setIsOpen(true)}
+                className={`group relative flex flex-col rounded-2xl border border-slate-200 bg-white p-8 shadow-lg transition-all hover:border-orange-200 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900 dark:hover:border-orange-800 h-full ${fullDescription ? 'cursor-pointer' : ''}`}
             >
                 <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-orange-50 text-orange-600 transition-colors group-hover:bg-orange-600 group-hover:text-white dark:bg-orange-900/20 dark:text-orange-400 dark:group-hover:bg-orange-600 dark:group-hover:text-white">
                     <Icon size={28} />
@@ -35,8 +36,11 @@ export function ProjectCard({ title, description, icon: Icon, index, images, ful
                     {description}
                 </p>
                 {fullDescription && (
-                    <button
-                        onClick={() => setIsOpen(true)}
+                    <button 
+                        onClick={(e) => {
+                            e.stopPropagation()
+                            setIsOpen(true)
+                        }}
                         className="mt-auto inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-700 dark:text-orange-400"
                     >
                         Read More <ArrowRight className="ml-1 h-4 w-4" />

@@ -14,7 +14,7 @@ export default function ProjectsPage() {
             
             As part of the Amna Aman Organization’s Inclusion Project for Special Children, I had the opportunity to talk about the importance of treating everyone with respect, empathy, and equality — because every child deserves to feel seen, valued, and included.`,
             icon: Users,
-            images: ["/images/image1.jpg", "/images/image2.jpg", "/images/image3.jpg"]
+            images: ["/images/image1.jpeg", "/images/image2.jpeg", "/images/image3.jpeg"]
         },
         {
             title: "Code for Inclusion",
