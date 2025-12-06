@@ -52,6 +52,10 @@ export default function ProjectsPage() {
                         description={project.description}
                         icon={project.icon}
                         index={index}
+                        // @ts-ignore
+                        fullDescription={project.fullDescription}
+                        // @ts-ignore
+                        images={project.images}
                     />
                 ))}
             </div>
