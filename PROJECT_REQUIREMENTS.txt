@@ -1,0 +1,119 @@
+Project Request: AmnaAman Organization Website
+Role: You are a Senior Full-Stack Developer and UI/UX Expert specializing in accessible web design. Goal: Build a responsive, modern, and accessible website for a non-profit organization named AmnaAman Project. Constraint: The code must be clean, maintainable, and not over-complicated.
+
+1. Tech Stack (Strict Requirements)
+Framework: Next.js (App Router) – for SEO and performance.
+
+Styling: Tailwind CSS.
+
+Components: Lucid React (for icons) + Shadcn/UI (optional, or standard clean Tailwind components).
+
+Theme: Must have a Light/Dark mode toggle (default to Light).
+
+Database & Auth: Supabase (Free Tier).
+
+Use Supabase Auth for User Login/Signup.
+
+Use Supabase Database to store user profiles (if needed).
+
+Hosting Compatibility: Must be deployable on Vercel (Free Tier).
+
+2. Design Guidelines
+Aesthetic: Professional, clean, and trustworthy. Use a color palette suitable for a non-profit (blues, teals, or soft greens).
+
+Accessibility: Since the target audience includes people with diverse abilities, ensure high contrast, clear fonts, and proper ARIA labels.
+
+Responsiveness: Mobile-first design.
+
+3. Site Architecture & Navigation
+Navbar:
+
+Logo (Text: AmnaAman)
+
+Links: Home, About, Projects, Volunteer, Donate
+
+Right Side: Theme Toggle (Sun/Moon), "Login/Sign Up" button.
+
+Protected Route:
+
+/courses -> This page is accessible only to logged-in users.
+
+4. Page-by-Page Content & Requirements
+A. Home Page (Hero Section)
+Headline: Welcome to AmnaAman — Where Technology Meets Inclusion
+
+Sub-headline: At AmnaAman, we are creating a future where every individual, regardless of ability, can learn, grow, and connect. Founded by Amna Khurram (CS Student, NUTECH University, Batch 2024).
+
+CTA Buttons: [Volunteer Now] [Donate Us]
+
+B. About Us
+Mission: To build inclusive digital communities through technology, compassion, and opportunity.
+
+Vision: A connected world where every individual, regardless of ability, has the chance to thrive.
+
+Body Text: AmnaAman is a youth-led organization devoted to Empowering Abilities and Building Futures. We believe in a world where inclusion and accessibility are not privileges, but rights. Our mission is to make education, job opportunities, and social connection accessible to all — especially individuals with autism, ADHD, Down syndrome, and diverse physical abilities.
+
+C. Projects (Grid Layout)
+Display these cards with nice icons:
+
+Code for Inclusion: Providing inclusive online workshops and beginner coding lessons for students with diverse learning abilities.
+
+EduTech Access: Making online learning accessible for everyone using free tools like Google Meet, Canva, and Moodle.
+
+Community Connect: Building a safe digital space for families, teachers, and caregivers to connect, learn, and grow together.
+
+Job Support Network: Helping individuals with disabilities find jobs, internships, and skill-based training.
+
+D. Volunteer Registration
+Content: Join our vibrant volunteer community! Volunteers play an essential role in teaching, managing events, and mentoring students across Pakistan. You will receive a verified certificate of volunteer service.
+
+Action: A simple form or a button linking to a Google Form (for now, to keep code simple) or a basic contact form.
+
+E. Donate Us
+Message: Your donations help sustain our mission. Every contribution helps us organize free courses and support programs.
+
+Bank Details Card:
+
+Bank: Faysal Bank
+
+Account Title: Donation Account
+
+Account Number: PK18FAYS3077383000005640
+
+Microfinance Card:
+
+Easypaisa: 03085105000
+
+F. Contact Us
+Phone: 03085105000
+
+Email: amnaaman.org@gmail.com
+
+Location: Islamabad, Pakistan
+
+Social Icons: Instagram, LinkedIn, GitHub, Facebook.
+
+G. The "Courses" Page (LMS - Protected)
+Requirement: This page must check if a user is authenticated via Supabase. If not, redirect to Login.
+
+Content (Tabs or Sections):
+
+Tech Courses: C++, HTML, CSS, Basic Programming.
+
+Creative Courses: Canva, CapCut, Video Editing, Book Writing, Crafts, Painting, Baking, Sketching.
+
+Personal Grooming: Communication skills, financial responsibility, self-confidence, professional etiquette.
+
+Note: Display these as a grid of cards. Since we want to keep it simple, hardcode the course list for V1, but set up the page structure so it is secure.
+
+H. Authentication (Login/Signup)
+Create a clean Login page using Supabase Auth UI (Email/Password).
+
+Style it to match the website theme.
+
+5. Footer
+Text: "Empowering Abilities. Building Futures."
+
+Credits: "Created by Amna Khurram (CS 2024, NUTECH University) and Team AmnaAman."
+
+Copyright: "© 2025 AmnaAman.org"
