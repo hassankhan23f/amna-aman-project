@@ -79,7 +79,7 @@ export default function VolunteerPage() {
                                 Fill out our simple registration form and we'll get in touch with you shortly.
                             </p>
                             <a
-                                href="https://forms.google.com"
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSeIbxmCRT8DALf50PmpOwdB-FMmaZzsgkcmNo0wsafD_l11_Q/viewform?usp=publish-editor"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center rounded-full bg-white px-8 py-3 text-base font-bold text-orange-600 transition-all hover:bg-orange-50 hover:scale-105 shadow-lg"

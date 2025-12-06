@@ -43,10 +43,10 @@ export function Footer() {
                             <Link href="#" className="text-slate-400 hover:text-orange-400 dark:hover:text-orange-400 transition-colors">
                                 <Twitter size={20} />
                             </Link>
-                            <Link href="#" className="text-slate-400 hover:text-pink-600 dark:hover:text-pink-400 transition-colors">
+                            <Link href="https://www.instagram.com/amnaaman.project?igsh=czZrNmhmZDVlOHMz&utm_source=qr" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-pink-600 dark:hover:text-pink-400 transition-colors">
                                 <Instagram size={20} />
                             </Link>
-                            <Link href="#" className="text-slate-400 hover:text-orange-700 dark:hover:text-orange-500 transition-colors">
+                            <Link href="https://www.linkedin.com/company/amna-aman-project/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-orange-700 dark:hover:text-orange-500 transition-colors">
                                 <Linkedin size={20} />
                             </Link>
                         </div>
