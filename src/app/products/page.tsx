@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ShoppingBag, Star, ArrowRight } from "lucide-react"
+import { ShoppingBag, Star, ArrowRight, ExternalLink } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
@@ -9,51 +9,41 @@ export default function ProductsPage() {
     const products = [
         {
             id: 1,
-            name: "AmnaAman Hoodie",
-            price: "PKR 3500",
-            category: "Merchandise",
-            image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=800&q=80",
-            rating: 4.8
+            name: "SafeBand Mini",
+            price: "PKR 9,000",
+            category: "Safety",
+            image: "/images/safeband-mini.png",
+            rating: 5.0,
+            description: "SafeBand Mini™ is a soft, sensory-friendly wearable safety band designed to help protect autistic children from wandering while providing parents with real-time location tracking.",
+            link: "https://safeband-one.vercel.app/"
         },
         {
             id: 2,
-            name: "Coding Starter Kit",
-            price: "PKR 5000",
-            category: "Education",
-            image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
-            rating: 4.9
+            name: "MindBridge",
+            price: "PKR 10,000",
+            category: "AI Mental Health",
+            image: "/images/mindbridge.png",
+            rating: 4.9,
+            description: "Privacy-first AI-based mental health support using emotion & voice analysis. Features risk scoring, personalized support, and caregiver alerts to bridge the gap in mental health detection.",
+            link: "https://mindbridge-lyart.vercel.app/"
         },
         {
             id: 3,
-            name: "Accessibility Keyboard",
-            price: "PKR 4500",
-            category: "Tech",
-            image: "https://images.unsplash.com/photo-1587829741301-dc798b91a603?w=800&q=80",
-            rating: 5.0
+            name: "Accessibility Chrome Extension",
+            price: "Free for Members",
+            category: "Software",
+            image: "/images/accessibility-extension.png",
+            rating: 4.8,
+            description: "Browser extension for people with visual impairment, dyslexia, and color blindness. Features text readability enhancements, color contrast adjustment, and simplified visual layouts."
         },
         {
             id: 4,
-            name: "Tote Bag",
-            price: "PKR 1200",
-            category: "Merchandise",
-            image: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=800&q=80",
-            rating: 4.5
-        },
-        {
-            id: 5,
-            name: "Notebook Set",
-            price: "PKR 850",
-            category: "Stationery",
-            image: "https://images.unsplash.com/photo-1531346878377-a513bc95ba0d?w=800&q=80",
-            rating: 4.7
-        },
-        {
-            id: 6,
-            name: "Tech Backpack",
-            price: "PKR 6500",
-            category: "Accessories",
-            image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&q=80",
-            rating: 4.9
+            name: "Cortex",
+            price: "PKR 15,000",
+            category: "Assistive Tech",
+            image: "/images/cortex.png",
+            rating: 4.9,
+            description: "This system can be used for people with limited mobility, allowing them to access multiple services and activities from the comfort of their sitting position. It is designed to support and empower people with disabilities by reducing physical barriers and increasing independence."
         }
     ]
 
@@ -89,7 +79,6 @@ export default function ProductsPage() {
                                 className="group relative flex flex-col rounded-2xl border border-slate-200 bg-white shadow-sm transition-all hover:shadow-xl dark:border-slate-800 dark:bg-slate-900 overflow-hidden"
                             >
                                 <div className="relative aspect-[4/3] overflow-hidden bg-slate-100 dark:bg-slate-800">
-                                    {/* Placeholder image since we don't have local images, using pure CSS placeholder if external fails or just use the div */}
                                     <div
                                         className="w-full h-full bg-cover bg-center transition-transform hover:scale-105 duration-500"
                                         style={{ backgroundImage: `url(${product.image})` }}
@@ -109,14 +98,32 @@ export default function ProductsPage() {
                                                 <span className="ml-1 text-sm font-medium text-slate-600 dark:text-slate-400">{product.rating}</span>
                                             </div>
                                         </div>
+                                        <p className="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-3">
+                                            {product.description}
+                                        </p>
                                         <p className="text-2xl font-bold text-slate-900 dark:text-white">
                                             {product.price}
                                         </p>
                                     </div>
-                                    <Button className="mt-auto w-full bg-orange-600 hover:bg-orange-700 text-white rounded-xl">
-                                        <ShoppingBag size={18} className="mr-2" />
-                                        Add to Cart
-                                    </Button>
+                                    <div className="mt-auto space-y-3">
+                                        <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white rounded-xl">
+                                            <ShoppingBag size={18} className="mr-2" />
+                                            Add to Cart
+                                        </Button>
+                                        {/* @ts-ignore */}
+                                        {product.link && (
+                                            <a
+                                                // @ts-ignore
+                                                href={product.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center justify-center w-full px-4 py-2 text-sm font-medium text-orange-600 bg-orange-50 hover:bg-orange-100 rounded-xl transition-colors dark:bg-orange-900/20 dark:text-orange-400 dark:hover:bg-orange-900/30"
+                                            >
+                                                <ExternalLink size={16} className="mr-2" />
+                                                View 3D Simulation
+                                            </a>
+                                        )}
+                                    </div>
                                 </div>
                             </motion.div>
                         ))}

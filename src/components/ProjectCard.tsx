@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { LucideIcon, X, ArrowRight } from "lucide-react"
+import { LucideIcon, X, ArrowRight, ExternalLink } from "lucide-react"
 import React from "react"
 import Image from "next/image"
 
@@ -12,7 +12,7 @@ interface ProjectCardProps {
     index: number
 }
 
-export function ProjectCard({ title, description, icon: Icon, index, images, fullDescription }: ProjectCardProps & { images?: string[], fullDescription?: string }) {
+export function ProjectCard({ title, description, icon: Icon, index, images, fullDescription, link }: ProjectCardProps & { images?: string[], fullDescription?: string, link?: string }) {
     const [isOpen, setIsOpen] = React.useState(false)
 
     return (
@@ -36,7 +36,7 @@ export function ProjectCard({ title, description, icon: Icon, index, images, ful
                     {description}
                 </p>
                 {fullDescription && (
-                    <button 
+                    <button
                         onClick={(e) => {
                             e.stopPropagation()
                             setIsOpen(true)
@@ -71,6 +71,18 @@ export function ProjectCard({ title, description, icon: Icon, index, images, ful
                             <p className="text-lg text-slate-600 dark:text-slate-300 leading-relaxed whitespace-pre-line">
                                 {fullDescription}
                             </p>
+
+                            {link && (
+                                <a
+                                    href={link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-orange-600 text-white font-medium hover:bg-orange-700 transition-colors"
+                                >
+                                    <ExternalLink size={20} className="mr-2" />
+                                    View 3D Simulation
+                                </a>
+                            )}
 
                             {images && images.length > 0 && (
                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
