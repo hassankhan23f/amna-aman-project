@@ -94,8 +94,8 @@ export default function Home() {
           >
             <div className="relative w-full aspect-square md:aspect-[4/3] rounded-[3rem] sm:rounded-[4rem] overflow-hidden shadow-2xl border border-black/5 dark:border-white/10 group">
               <Image
-                src="/images/home_hero_new.png"
-                alt="Inclusive Technological Ecosystem"
+                src="/images/home_hero_authentic.png"
+                alt="Diverse individuals with disabilities collaborating in a modern tech workspace"
                 fill
                 className="object-cover transform group-hover:scale-105 transition-transform duration-1000"
                 priority
@@ -133,8 +133,8 @@ export default function Home() {
           {/* Bento Box 1: Large Visual Feature (Spans 8 cols on desktop) */}
           <div className="md:col-span-8 relative rounded-[2.5rem] overflow-hidden bg-slate-100 dark:bg-slate-900 min-h-[400px] group border border-slate-200 dark:border-slate-800">
             <Image
-              src="/images/home_feature_1.png"
-              alt="Technological Node Connection"
+              src="/images/home_feature_1_authentic.png"
+              alt="Young person with special needs using assistive technology"
               fill
               className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
             />
