@@ -1,9 +1,7 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { CreditCard, Smartphone, Copy, Check } from "lucide-react"
+import { CreditCard, Smartphone, Check, Copy } from "lucide-react"
 import { useState } from "react"
-import Image from "next/image"
 
 export default function DonatePage() {
     const [copied, setCopied] = useState<string | null>(null)
@@ -15,110 +13,100 @@ export default function DonatePage() {
     }
 
     return (
-        <div className="flex flex-col min-h-screen">
-            <section className="relative bg-slate-50 py-20 dark:bg-slate-900 overflow-hidden">
-                <div className="absolute inset-0 z-0">
-                    <Image
-                        src="/images/donate.png"
-                        alt="Donate Background"
-                        fill
-                        className="object-cover opacity-10"
-                    />
+        <div className="flex flex-col min-h-screen bg-white dark:bg-[#030712] selection:bg-orange-500/30">
+            {/* Impact Hero */}
+            <section className="pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-center">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 text-sm font-medium text-slate-900 dark:text-slate-300 mb-8 border border-slate-200 dark:border-slate-800">
+                    Your Impact
                 </div>
-                <div className="container relative mx-auto px-4 text-center sm:px-6 lg:px-8 z-10">
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl"
-                    >
-                        Support Our <span className="text-orange-600 dark:text-orange-400">Mission</span>
-                    </motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 }}
-                        className="mx-auto mt-4 max-w-2xl text-lg text-slate-600 dark:text-slate-400"
-                    >
-                        Your contribution helps us provide free education and resources to those who need it most.
-                    </motion.p>
-                </div>
+                <h1 className="text-5xl sm:text-7xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-6 max-w-4xl mx-auto">
+                    Fuel the <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">future.</span>
+                </h1>
+                <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                    100% of your donation directly funds educational resources, accessible tech, and community workshops for our students.
+                </p>
             </section>
 
-            <section className="py-16">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
-                        {/* Bank Details Card */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.2 }}
-                            className="rounded-2xl border border-slate-200 bg-white p-8 shadow-lg dark:border-slate-800 dark:bg-slate-950"
-                        >
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className="p-3 rounded-full bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400">
-                                    <CreditCard size={24} />
-                                </div>
-                                <h3 className="text-xl font-bold text-slate-900 dark:text-white">Bank Transfer</h3>
+            {/* Premium Payment Cards Section */}
+            <section className="pb-32 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full">
+                <div className="grid md:grid-cols-2 gap-8">
+
+                    {/* Bank Card - Designed like a sleek credit card */}
+                    <div className="relative overflow-hidden rounded-[2rem] bg-slate-900 text-white p-10 border border-slate-800 shadow-2xl group hover:border-orange-500/50 transition-colors">
+                        {/* Abstract Card Background Elements */}
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/20 rounded-full mix-blend-screen filter blur-3xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                        <div className="absolute bottom-0 left-0 w-48 h-48 bg-blue-500/20 rounded-full mix-blend-screen filter blur-3xl opacity-50"></div>
+
+                        <div className="relative z-10 flex flex-col h-full justify-between min-h-[280px]">
+                            <div className="flex justify-between items-start mb-12">
+                                <CreditCard size={32} className="opacity-80" />
+                                <span className="text-sm font-medium tracking-widest opacity-60 uppercase">Bank Transfer</span>
                             </div>
 
-                            <div className="space-y-4">
+                            <div className="space-y-6">
                                 <div>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400">Bank Name</p>
-                                    <p className="font-medium text-slate-900 dark:text-white">Faysal Bank</p>
+                                    <p className="text-xs uppercase tracking-wider opacity-60 mb-1">Account Title</p>
+                                    <p className="font-semibold text-lg tracking-wide">Donation Account</p>
                                 </div>
-                                <div>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400">Account Title</p>
-                                    <p className="font-medium text-slate-900 dark:text-white">Donation Account</p>
-                                </div>
-                                <div className="group relative">
-                                    <p className="text-sm text-slate-500 dark:text-slate-400">Account Number</p>
-                                    <div className="flex items-center justify-between mt-1 p-3 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
-                                        <code className="font-mono font-medium text-slate-900 dark:text-white">PK18FAYS3077383000005640</code>
-                                        <button
-                                            onClick={() => copyToClipboard("PK18FAYS3077383000005640", "bank")}
-                                            className="text-slate-400 hover:text-orange-600 transition-colors"
-                                        >
-                                            {copied === "bank" ? <Check size={18} /> : <Copy size={18} />}
-                                        </button>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <p className="text-xs uppercase tracking-wider opacity-60 mb-1">Bank Name</p>
+                                        <p className="font-medium">Faysal Bank</p>
                                     </div>
                                 </div>
-                            </div>
-                        </motion.div>
 
-                        {/* Microfinance Card */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.3 }}
-                            className="rounded-2xl border border-slate-200 bg-white p-8 shadow-lg dark:border-slate-800 dark:bg-slate-950"
-                        >
-                            <div className="flex items-center gap-4 mb-6">
-                                <div className="p-3 rounded-full bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400">
+                                <div className="pt-4 border-t border-white/10 flex items-end justify-between">
+                                    <div>
+                                        <p className="text-xs uppercase tracking-wider opacity-60 mb-2">IBAN / Account Number</p>
+                                        <code className="text-xl sm:text-2xl font-mono tracking-widest text-orange-400">PK18FAYS3077383000005640</code>
+                                    </div>
+                                    <button
+                                        onClick={() => copyToClipboard("PK18FAYS3077383000005640", "bank")}
+                                        className="mb-1 p-2 bg-white/10 hover:bg-white/20 rounded-xl transition-colors backdrop-blur-md"
+                                        title="Copy Account Number"
+                                    >
+                                        {copied === "bank" ? <Check size={20} className="text-green-400" /> : <Copy size={20} />}
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Easypaisa Card - Designed like a modern fintech app card */}
+                    <div className="relative overflow-hidden rounded-[2rem] bg-slate-50 dark:bg-[#0A0E17] text-slate-900 dark:text-white p-10 border border-slate-200 dark:border-slate-800 shadow-xl hover:border-amber-500/50 transition-colors">
+                        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+
+                        <div className="relative z-10 flex flex-col h-full justify-between min-h-[280px]">
+                            <div className="flex justify-between items-start mb-12">
+                                <div className="p-3 bg-amber-100 dark:bg-amber-500/10 text-amber-600 dark:text-amber-500 rounded-2xl">
                                     <Smartphone size={24} />
                                 </div>
-                                <h3 className="text-xl font-bold text-slate-900 dark:text-white">Easypaisa / JazzCash</h3>
+                                <span className="text-sm font-bold tracking-widest text-slate-400 uppercase">Easypaisa</span>
                             </div>
 
-                            <div className="space-y-4">
+                            <div className="space-y-6">
                                 <div>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400">Service</p>
-                                    <p className="font-medium text-slate-900 dark:text-white">Easypaisa</p>
+                                    <p className="text-xs uppercase tracking-wider text-slate-500 mb-1">Account Title</p>
+                                    <p className="font-semibold text-lg tracking-wide">Amna Aman Project</p>
                                 </div>
-                                <div className="group relative">
-                                    <p className="text-sm text-slate-500 dark:text-slate-400">Account Number</p>
-                                    <div className="flex items-center justify-between mt-1 p-3 rounded-lg bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
-                                        <code className="font-mono font-medium text-slate-900 dark:text-white">03085105000</code>
-                                        <button
-                                            onClick={() => copyToClipboard("03085105000", "easy")}
-                                            className="text-slate-400 hover:text-amber-600 transition-colors"
-                                        >
-                                            {copied === "easy" ? <Check size={18} /> : <Copy size={18} />}
-                                        </button>
+
+                                <div className="pt-8 border-t border-slate-200 dark:border-slate-800 flex items-end justify-between">
+                                    <div>
+                                        <p className="text-xs uppercase tracking-wider text-slate-500 mb-2">Mobile Number</p>
+                                        <code className="text-2xl sm:text-3xl font-mono tracking-widest text-slate-900 dark:text-white font-bold">0308 5105000</code>
                                     </div>
+                                    <button
+                                        onClick={() => copyToClipboard("03085105000", "easy")}
+                                        className="mb-1 p-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-amber-500 dark:hover:border-amber-500 rounded-xl transition-all shadow-sm"
+                                        title="Copy Mobile Number"
+                                    >
+                                        {copied === "easy" ? <Check size={20} className="text-green-500" /> : <Copy size={20} className="text-slate-500" />}
+                                    </button>
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
                     </div>
+
                 </div>
             </section>
         </div>
