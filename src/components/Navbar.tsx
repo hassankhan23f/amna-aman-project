@@ -49,17 +49,17 @@ export function Navbar() {
     return (
         <nav
             className={`sticky top-0 z-50 w-full transition-all duration-300 ${scrolled
-                    ? "bg-white/80 backdrop-blur-2xl shadow-sm border-b border-slate-200/50 dark:bg-slate-950/80 dark:border-slate-800/50 dark:shadow-slate-900/20"
-                    : "bg-transparent border-b border-transparent"
+                ? "bg-white/80 backdrop-blur-2xl shadow-sm border-b border-slate-200/50 dark:bg-slate-950/80 dark:border-slate-800/50 dark:shadow-slate-900/20"
+                : "bg-transparent border-b border-transparent"
                 }`}
             role="navigation"
             aria-label="Main navigation"
         >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex h-20 items-center justify-between">
+                <div className="flex h-16 items-center justify-between">
                     <div className="flex items-center">
                         <Link href="/" className="flex items-center space-x-3 group" aria-label="AmnaAman Home">
-                            <div className="relative h-10 w-10 overflow-hidden rounded-full ring-2 ring-slate-100 dark:ring-slate-800 transition-transform group-hover:scale-105">
+                            <div className="relative h-8 w-8 overflow-hidden rounded-full ring-2 ring-slate-100 dark:ring-slate-800 transition-transform group-hover:scale-105">
                                 <Image
                                     src="/images/logo.jpeg"
                                     alt="AmnaAman Logo"
@@ -67,7 +67,7 @@ export function Navbar() {
                                     className="object-cover"
                                 />
                             </div>
-                            <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-amber-500 dark:from-orange-400 dark:to-amber-400">
+                            <span className="text-xl sm:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-600 to-amber-500 dark:from-orange-400 dark:to-amber-400">
                                 AmnaAman
                             </span>
                         </Link>
@@ -107,14 +107,14 @@ export function Navbar() {
                             {user ? (
                                 <Link
                                     href="/dashboard"
-                                    className="rounded-full bg-orange-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-orange-700 hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-slate-950"
+                                    className="rounded-full bg-orange-600 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:bg-orange-700 hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-slate-950"
                                 >
                                     Dashboard
                                 </Link>
                             ) : (
                                 <Link
                                     href="/login"
-                                    className="rounded-full bg-orange-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-all hover:bg-orange-700 hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-slate-950"
+                                    className="rounded-full bg-orange-600 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:bg-orange-700 hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-slate-950"
                                 >
                                     Login
                                 </Link>

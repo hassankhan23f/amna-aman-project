@@ -26,7 +26,7 @@ export default function Home() {
         HERO SECTION - Authentic & Premium
         ========================================
       */}
-      <section className="relative pt-12 pb-20 lg:pt-20 lg:pb-32 px-4 sm:px-6 lg:px-8 w-full max-w-[1400px] mx-auto flex flex-col justify-center">
+      <section className="relative pt-10 pb-16 lg:pt-16 lg:pb-24 px-4 sm:px-6 lg:px-8 w-full max-w-[1400px] mx-auto flex flex-col justify-center">
 
         {/* Background Ambient Glow */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-orange-400/20 via-amber-300/10 to-transparent rounded-full blur-[120px] -z-10 opacity-70"></div>
@@ -50,7 +50,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-              className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter text-slate-900 dark:text-white leading-[1] mb-6"
+              className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tighter text-slate-900 dark:text-white leading-[1] mb-5"
             >
               Technology That<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">Includes Everyone.</span>
@@ -60,7 +60,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0"
+              className="text-base sm:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0"
             >
               We build <strong className="text-slate-900 dark:text-white">assistive devices</strong>, run <strong className="text-slate-900 dark:text-white">inclusive education programs</strong>, and create <strong className="text-slate-900 dark:text-white">accessible software</strong> for children and adults with special needs.
             </motion.p>
@@ -72,14 +72,14 @@ export default function Home() {
               className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start mb-8"
             >
               <Link href="/projects" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full h-14 px-8 rounded-full bg-orange-600 hover:bg-orange-700 text-lg font-bold transition-all hover:scale-105 shadow-xl text-white">
+                <Button size="lg" className="w-full h-12 px-6 rounded-full bg-orange-600 hover:bg-orange-700 text-base font-bold transition-all hover:scale-105 shadow-xl text-white">
                   See Our Projects
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               <Link href="/donate" className="w-full sm:w-auto">
-                <Button size="lg" variant="outline" className="w-full h-14 px-8 rounded-full border-2 border-slate-200 hover:border-orange-500 hover:text-orange-600 dark:border-slate-800 dark:text-white dark:hover:border-orange-500 dark:hover:text-orange-400 dark:hover:bg-transparent text-lg font-bold transition-all bg-transparent">
-                  <Heart size={18} className="mr-2" /> Support a Child
+                <Button size="lg" variant="outline" className="w-full h-12 px-6 rounded-full border-2 border-slate-200 hover:border-orange-500 hover:text-orange-600 dark:border-slate-800 dark:text-white dark:hover:border-orange-500 dark:hover:text-orange-400 dark:hover:bg-transparent text-base font-bold transition-all bg-transparent">
+                  <Heart size={16} className="mr-2" /> Support a Child
                 </Button>
               </Link>
             </motion.div>
@@ -92,11 +92,11 @@ export default function Home() {
               className="flex flex-wrap items-center gap-3 justify-center lg:justify-start"
             >
               {[
-                { label: "5,000+ Lives Impacted", icon: Users },
+                { label: "Community Driven", icon: Users },
                 { label: "SafeBand Device", icon: Shield },
                 { label: "Free Workshops", icon: Heart },
               ].map(({ label, icon: Icon }) => (
-                <div key={label} className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800/50 text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
+                <div key={label} className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800/50 text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
                   <Icon size={14} className="text-orange-500 shrink-0" />
                   {label}
                 </div>
@@ -109,9 +109,9 @@ export default function Home() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
-            className="flex-1 w-full max-w-[600px] lg:max-w-[700px] relative mt-12 lg:mt-0"
+            className="flex-1 w-full max-w-[500px] lg:max-w-[600px] relative mt-12 lg:mt-0"
           >
-            <div className="relative w-full aspect-square md:aspect-[4/3] rounded-[3rem] sm:rounded-[4rem] overflow-hidden shadow-2xl border border-black/5 dark:border-white/10 group">
+            <div className="relative w-full aspect-square md:aspect-[4/3] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-xl border border-black/5 dark:border-white/10 group">
               <Image
                 src="/images/home_hero_authentic.png"
                 alt="Diverse individuals with disabilities collaborating in a modern tech workspace"
@@ -120,17 +120,6 @@ export default function Home() {
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-
-              {/* Floating Stat Card */}
-              <div className="absolute bottom-6 left-6 right-6 sm:bottom-10 sm:left-10 sm:right-auto bg-white/90 dark:bg-[#030712]/80 backdrop-blur-xl p-5 sm:p-6 rounded-3xl border border-white/40 dark:border-white/10 shadow-xl flex items-center gap-4 hidden sm:flex transform transition-transform group-hover:-translate-y-2">
-                <div className="h-14 w-14 rounded-2xl bg-orange-100 dark:bg-orange-500/20 flex items-center justify-center text-orange-600 dark:text-orange-400">
-                  <Users size={28} />
-                </div>
-                <div>
-                  <div className="text-3xl font-black text-slate-900 dark:text-white">5,000+</div>
-                  <div className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">Lives Impacted</div>
-                </div>
-              </div>
             </div>
           </motion.div>
         </div>
@@ -141,10 +130,10 @@ export default function Home() {
         BENTO GRID - Mission & Core Features
         ========================================
       */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto w-full">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white mb-4 tracking-tight">Our Core Framework</h2>
-          <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-medium">Delivering holistic technological and educational solutions.</p>
+      <section className="py-16 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto w-full">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white mb-3 tracking-tight">Our Core Framework</h2>
+          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto font-medium">Delivering holistic technological and educational solutions.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8">
@@ -193,9 +182,9 @@ export default function Home() {
             <div className="absolute inset-0 opacity-40 mix-blend-overlay">
               <Image src="/images/home_feature_2_authentic.png" alt="Community" fill className="object-cover" />
             </div>
-            <div className="relative z-10 p-8 sm:p-14 md:p-20 flex flex-col md:flex-row items-center justify-between gap-10">
+            <div className="relative z-10 p-8 sm:p-14 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10">
               <div className="max-w-xl text-center md:text-left">
-                <h3 className="text-4xl sm:text-5xl font-black mb-6 tracking-tight">The Inclusive Ecosystem.</h3>
+                <h3 className="text-3xl sm:text-4xl font-black mb-4 tracking-tight">The Inclusive Ecosystem.</h3>
                 <p className="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed">
                   A comprehensive framework extending from early assessment labs to job placement networks for neurological diversities.
                 </p>
@@ -221,7 +210,7 @@ export default function Home() {
         EDITORIAL TESTIMONIALS
         ========================================
       */}
-      <section className="py-24 sm:py-32 relative w-full overflow-hidden bg-slate-50 dark:bg-[#080c16]">
+      <section className="py-16 sm:py-24 relative w-full overflow-hidden bg-slate-50 dark:bg-[#080c16]">
         {/* Subtle Inclusion Pattern Background */}
         <div className="absolute inset-0 opacity-[0.15] dark:opacity-10 pointer-events-none mix-blend-multiply dark:mix-blend-screen">
           <Image src="/images/bg_inclusion_pattern.png" alt="Inclusion Pattern" fill className="object-cover" />
@@ -233,8 +222,8 @@ export default function Home() {
         </div>
 
         <div className="px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto relative z-10">
-          <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-8">
-            <h2 className="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">
+          <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-6">
+            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">
               Community <span className="text-orange-500">Stories.</span>
             </h2>
             <div className="flex items-center gap-2">
@@ -273,7 +262,7 @@ export default function Home() {
         MASSIVE CTA SECTION
         ========================================
       */}
-      <section className="relative py-32 sm:py-48 mt-12 overflow-hidden bg-[#030712]">
+      <section className="relative py-20 sm:py-32 mt-8 overflow-hidden bg-[#030712]">
         <Image
           src="/images/bg_community_hands.png"
           alt="Diverse community hands together"
@@ -283,11 +272,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-[#030712]/50"></div>
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-5xl sm:text-7xl md:text-8xl font-black text-white tracking-tighter mb-8 leading-[0.9]">
+          <h2 className="text-4xl sm:text-6xl md:text-7xl font-black text-white tracking-tighter mb-6 leading-[1]">
             The Future is <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">Accessible.</span>
           </h2>
-          <p className="text-xl sm:text-2xl text-slate-300 font-medium mb-12 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-slate-300 font-medium mb-10 max-w-2xl mx-auto">
             Whether you want to sponsor a device, volunteer your tech skills, or join our events — your impact starts here.
           </p>
 
