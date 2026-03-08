@@ -18,21 +18,21 @@ export function ProjectCard({ title, description, icon: Icon, index, images, ful
     return (
         <>
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: index * 0.1, ease: "easeOut" }}
+                whileHover={{ y: -8, scale: 1.02 }}
                 onClick={() => fullDescription && setIsOpen(true)}
-                className={`group relative flex flex-col rounded-2xl border border-slate-200 bg-white p-8 shadow-lg transition-all hover:border-orange-200 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900 dark:hover:border-orange-800 h-full ${fullDescription ? 'cursor-pointer' : ''}`}
+                className={`group relative flex flex-col rounded-3xl border border-white/20 bg-white/50 p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-xl transition-all hover:border-orange-500/30 hover:shadow-[0_20px_40px_rgba(249,115,22,0.1)] dark:border-white/5 dark:bg-white/[0.02] dark:hover:border-orange-500/50 h-full ${fullDescription ? 'cursor-pointer' : ''}`}
             >
-                <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-orange-50 text-orange-600 transition-colors group-hover:bg-orange-600 group-hover:text-white dark:bg-orange-900/20 dark:text-orange-400 dark:group-hover:bg-orange-600 dark:group-hover:text-white">
-                    <Icon size={28} />
+                <div className="mb-8 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-100 to-orange-50 text-orange-600 shadow-inner transition-all duration-500 group-hover:scale-110 group-hover:from-orange-500 group-hover:to-amber-500 group-hover:text-white dark:from-white/5 dark:to-white/5 dark:text-orange-400 dark:shadow-none dark:group-hover:from-orange-500 dark:group-hover:to-amber-500">
+                    <Icon size={32} strokeWidth={1.5} />
                 </div>
-                <h3 className="mb-3 text-xl font-bold text-gray-900 dark:text-white">
+                <h3 className="mb-4 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
                     {title}
                 </h3>
-                <p className="flex-1 text-gray-600 dark:text-gray-400 leading-relaxed mb-4 line-clamp-3">
+                <p className="flex-1 text-slate-600 dark:text-slate-400 leading-relaxed max-w-sm">
                     {description}
                 </p>
                 {fullDescription && (

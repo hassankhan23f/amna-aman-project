@@ -30,65 +30,104 @@ export default function Home() {
     <div className="flex flex-col">
       {/* Hero Section */}
       {/* Hero Section */}
-      <section className="relative flex min-h-[90vh] items-center overflow-hidden bg-slate-50 px-4 dark:bg-slate-950 sm:px-6 lg:px-8">
-        {/* Background Image with Overlay */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/home.jpg"
-            alt="Inclusive coding classroom"
-            fill
-            className="object-cover opacity-50 dark:opacity-30"
-            priority
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-50/90 via-slate-50/70 to-transparent dark:from-slate-950/90 dark:via-slate-950/70 dark:to-transparent"></div>
+      <section className="relative flex min-h-[95vh] items-center overflow-hidden bg-slate-50 dark:bg-[#030712] px-4 sm:px-6 lg:px-8">
+        {/* Background Gradients and Effects */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          {/* Animated Orbs */}
+          <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-orange-500/20 mix-blend-screen filter blur-[100px] animate-pulse dark:bg-orange-500/10"></div>
+          <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-amber-500/20 mix-blend-screen filter blur-[100px] animate-pulse delay-700 dark:bg-amber-500/10"></div>
+          <div className="absolute top-[40%] right-[20%] w-[30%] h-[30%] rounded-full bg-blue-500/10 mix-blend-screen filter blur-[100px] dark:bg-blue-500/5"></div>
+
+          <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20 mix-blend-overlay"></div>
+
+          {/* Subtle Grid */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
         </div>
 
         <div className="container relative z-10 mx-auto">
-          <div className="max-w-3xl space-y-8 text-left">
+          <div className="flex flex-col lg:flex-row items-center gap-16">
+            <div className="flex-1 space-y-10 text-left pt-20 lg:pt-0">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+              >
+                <div className="mb-8 inline-flex items-center rounded-full border border-orange-500/30 bg-orange-500/10 backdrop-blur-md px-5 py-2 text-sm font-medium text-orange-600 dark:border-orange-500/20 dark:bg-orange-500/10 dark:text-orange-400 shadow-[0_0_20px_rgba(249,115,22,0.15)]">
+                  <Star size={16} className="mr-2 fill-orange-500 text-orange-500" />
+                  Empowering 500+ Students Worldwide
+                </div>
+                <h1 className="text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-6xl md:text-7xl lg:text-8xl leading-[1.1]">
+                  Building <br />
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500">Inclusive Futures</span>
+                </h1>
+                <h2 className="mt-8 text-2xl font-medium text-slate-600 dark:text-slate-300 sm:text-3xl max-w-2xl leading-snug">
+                  Where Technology Meets Compassion and Opportunity.
+                </h2>
+              </motion.div>
+
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                className="max-w-xl text-xl text-slate-600 dark:text-slate-400 leading-relaxed"
+              >
+                We are creating a world where every individual, regardless of ability, can learn, grow, and connect through accessible technology.
+              </motion.p>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+                className="flex flex-col sm:flex-row gap-5 pt-4"
+              >
+                <Link href="/volunteer">
+                  <Button size="lg" className="w-full sm:w-auto rounded-full text-lg h-14 px-8 bg-gradient-to-r from-orange-600 to-amber-500 hover:from-orange-500 hover:to-amber-400 text-white border-0 shadow-[0_10px_30px_rgba(249,115,22,0.3)] hover:shadow-[0_15px_40px_rgba(249,115,22,0.4)] transition-all duration-300 transform hover:-translate-y-1">
+                    <span className="mr-2">Volunteer Now</span>
+                    <ArrowRight className="transition-transform group-hover:translate-x-1" size={20} />
+                  </Button>
+                </Link>
+                <Link href="/donate">
+                  <Button variant="outline" size="lg" className="w-full sm:w-auto rounded-full text-lg h-14 px-8 border-slate-300 dark:border-white/10 bg-white/50 dark:bg-white/5 backdrop-blur-md hover:bg-white/80 dark:hover:bg-white/10 text-slate-700 dark:text-white transition-all duration-300">
+                    Donate Us
+                  </Button>
+                </Link>
+              </motion.div>
+            </div>
+
+            {/* Hero Visual Element */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, scale: 0.9, x: 20 }}
+              animate={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+              className="flex-1 hidden lg:block relative"
             >
-              <div className="mb-6 inline-flex items-center rounded-full border border-orange-200 bg-orange-50/80 backdrop-blur-sm px-4 py-1.5 text-sm font-medium text-orange-800 dark:border-orange-800 dark:bg-orange-900/30 dark:text-orange-300">
-                <Star size={16} className="mr-2 fill-orange-600 text-orange-600 dark:fill-orange-400 dark:text-orange-400" />
-                Empowering 500+ Students Worldwide
+              <div className="relative w-full aspect-square max-w-[600px] ml-auto">
+                <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-tr from-orange-500/20 to-amber-300/20 rotate-6 scale-105 blur-2xl dark:from-orange-500/10 dark:to-amber-300/10"></div>
+                <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden border border-white/20 dark:border-white/10 shadow-2xl glass-dark z-10 hidden dark:block">
+                  <Image src="/images/home.jpg" alt="Inclusive ecosystem" fill className="object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" priority />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent"></div>
+                </div>
+                <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden border border-white/40 shadow-2xl z-10 dark:hidden">
+                  <Image src="/images/home.jpg" alt="Inclusive ecosystem" fill className="object-cover" priority />
+                </div>
+
+                {/* Floating Badge */}
+                <motion.div
+                  animate={{ y: [0, -15, 0] }}
+                  transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                  className="absolute -bottom-8 -left-8 z-20 glass-dark rounded-2xl p-6 border border-white/10 shadow-2xl backdrop-blur-xl"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="bg-gradient-to-br from-orange-500 to-amber-500 p-3 rounded-xl text-white">
+                      <Heart size={24} />
+                    </div>
+                    <div>
+                      <div className="text-2xl font-bold text-white">100%</div>
+                      <div className="text-sm text-slate-300">Community Driven</div>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
-              <h1 className="text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-6xl md:text-7xl lg:text-8xl">
-                Welcome to <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-amber-500 dark:from-orange-400 dark:to-amber-400">AmnaAman</span>
-              </h1>
-              <h2 className="mt-6 text-2xl font-medium text-slate-600 dark:text-slate-300 sm:text-3xl md:text-4xl">
-                Where Technology Meets Inclusion
-              </h2>
-            </motion.div>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="max-w-2xl text-xl text-slate-600 dark:text-slate-400 leading-relaxed"
-            >
-              We are creating a future where every individual, regardless of ability, can learn, grow, and connect. Join our mission to build a more inclusive world through technology and compassion.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col gap-4 sm:flex-row"
-            >
-              <Link href="/volunteer">
-                <Button size="lg" className="w-full sm:w-auto rounded-full text-lg h-14 px-8">
-                  <span className="mr-2">Volunteer Now</span>
-                  <ArrowRight className="transition-transform group-hover:translate-x-1" size={20} />
-                </Button>
-              </Link>
-              <Link href="/donate">
-                <Button variant="outline" size="lg" className="w-full sm:w-auto rounded-full text-lg h-14 px-8 bg-white/80 backdrop-blur-sm dark:bg-slate-900/80">
-                  Donate Us
-                </Button>
-              </Link>
             </motion.div>
           </div>
         </div>
@@ -114,62 +153,65 @@ export default function Home() {
       </section>
 
       {/* Mission Preview */}
-      <section className="bg-slate-50 py-24 dark:bg-slate-900/50">
+      <section className="bg-white py-32 dark:bg-[#030712]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className="text-center"
+            className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+            <h2 className="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
               Our Core Values
             </h2>
-            <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
+            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
               Driven by a passion for equality and empowerment.
             </p>
           </motion.div>
 
-          <div className="mt-16 grid gap-8 sm:grid-cols-3">
+          <div className="mt-20 grid gap-8 sm:grid-cols-3">
             {[
               {
                 icon: Heart,
                 title: "Compassion",
                 description: "We believe in the power of empathy to build bridges and foster understanding.",
                 color: "text-red-500",
-                bg: "bg-red-50 dark:bg-red-900/20",
+                bg: "from-red-50 to-red-100/50 dark:from-red-500/10 dark:to-red-500/5",
+                border: "group-hover:border-red-500/50"
               },
               {
                 icon: Lightbulb,
                 title: "Innovation",
                 description: "Leveraging technology to create accessible learning and growth opportunities.",
-                color: "text-yellow-500",
-                bg: "bg-yellow-50 dark:bg-yellow-900/20",
+                color: "text-amber-500",
+                bg: "from-amber-50 to-amber-100/50 dark:from-amber-500/10 dark:to-amber-500/5",
+                border: "group-hover:border-amber-500/50"
               },
               {
                 icon: Users,
                 title: "Community",
                 description: "Creating a safe, inclusive space for everyone to connect and thrive.",
                 color: "text-orange-500",
-                bg: "bg-orange-50 dark:bg-orange-900/20",
+                bg: "from-orange-50 to-orange-100/50 dark:from-orange-500/10 dark:to-orange-500/5",
+                border: "group-hover:border-orange-500/50"
               },
             ].map((item, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="group relative rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900"
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
+                className={`group relative rounded-3xl border border-slate-200/60 bg-white/50 p-10 shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl dark:border-white/5 dark:bg-white/[0.02] ${item.border}`}
               >
-                <div className={`mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl ${item.bg} ${item.color}`}>
-                  <item.icon size={28} />
+                <div className={`mb-8 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${item.bg} ${item.color} shadow-inner transition-transform duration-500 group-hover:scale-110`}>
+                  <item.icon size={32} strokeWidth={1.5} />
                 </div>
-                <h3 className="mb-3 text-xl font-bold text-slate-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
+                <h3 className="mb-4 text-2xl font-bold text-slate-900 dark:text-white transition-colors">
                   {item.title}
                 </h3>
-                <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
+                <p className="text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
                   {item.description}
                 </p>
               </motion.div>
@@ -179,17 +221,17 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-24 bg-white dark:bg-slate-950 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-30 pointer-events-none">
-          <div className="absolute top-10 left-10 w-64 h-64 bg-orange-100 rounded-full mix-blend-multiply filter blur-3xl dark:bg-orange-900/20"></div>
-          <div className="absolute bottom-10 right-10 w-64 h-64 bg-amber-100 rounded-full mix-blend-multiply filter blur-3xl dark:bg-amber-900/20"></div>
+      <section className="py-32 bg-slate-50 dark:bg-[#030712] relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-40 pointer-events-none">
+          <div className="absolute top-10 left-10 w-96 h-96 bg-orange-500/10 rounded-full mix-blend-screen filter blur-3xl dark:bg-orange-500/5"></div>
+          <div className="absolute bottom-10 right-10 w-96 h-96 bg-amber-500/10 rounded-full mix-blend-screen filter blur-3xl dark:bg-amber-500/5"></div>
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
               Why Choose AmnaAman?
             </h2>
-            <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
+            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
               We go beyond traditional education to provide a holistic ecosystem for growth.
             </p>
           </div>
@@ -201,17 +243,17 @@ export default function Home() {
             ].map((item, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="flex flex-col items-center text-center p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800"
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: i * 0.15, duration: 0.6, ease: "easeOut" }}
+                className="group flex flex-col items-center text-center p-10 rounded-3xl bg-white dark:bg-white/[0.02] border border-slate-200/60 dark:border-white/5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 hover:border-orange-500/30 hover:shadow-[0_20px_40px_rgba(249,115,22,0.1)]"
               >
-                <div className="mb-6 p-4 rounded-full bg-white dark:bg-slate-800 shadow-sm text-orange-600 dark:text-orange-400">
-                  <item.icon size={32} />
+                <div className="mb-8 p-5 rounded-2xl bg-orange-50 dark:bg-orange-500/10 shadow-inner text-orange-600 dark:text-orange-400 transition-transform duration-500 group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white">
+                  <item.icon size={36} strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">{item.title}</h3>
-                <p className="text-slate-600 dark:text-slate-400">{item.desc}</p>
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">{item.title}</h3>
+                <p className="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">{item.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -219,13 +261,13 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-slate-50 py-24 dark:bg-slate-900/50">
+      <section className="bg-white py-32 dark:bg-[#030712]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <h2 className="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-5xl">
               Voices of Impact
             </h2>
-            <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
+            <p className="mt-6 text-xl text-slate-600 dark:text-slate-400">
               Hear from our community members about their journey with AmnaAman.
             </p>
           </div>
@@ -238,13 +280,12 @@ export default function Home() {
       </section>
 
       {/* Partners Strip */}
-      <section className="py-16 bg-white dark:bg-slate-950 border-y border-slate-100 dark:border-slate-800">
+      <section className="py-20 bg-slate-50 dark:bg-[#030712] border-y border-slate-200/50 dark:border-white/5">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-8">Trusted by Leading Organizations</p>
-          <div className="flex flex-wrap justify-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-            {/* Placeholders for Partner Logos */}
+          <p className="text-sm font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-10">Trusted by Leading Organizations</p>
+          <div className="flex flex-wrap justify-center gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-700">
             {['Google', 'Microsoft', 'Github', 'Vercel', 'Supabase'].map((partner) => (
-              <span key={partner} className="text-2xl font-bold text-slate-400 dark:text-slate-600 hover:text-slate-900 dark:hover:text-white cursor-default">
+              <span key={partner} className="text-3xl font-bold text-slate-400 dark:text-slate-500 hover:text-slate-900 dark:hover:text-white cursor-default transition-colors duration-300">
                 {partner}
               </span>
             ))}
@@ -253,29 +294,38 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-orange-600 dark:bg-orange-900">
-          <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.5))]"></div>
+      <section className="relative py-32 overflow-hidden bg-slate-900 dark:bg-[#030712]">
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-600/90 to-amber-500/90 mix-blend-multiply dark:from-orange-900/80 dark:to-orange-600/80"></div>
+          <div className="absolute inset-0 bg-[url('/noise.svg')] opacity-20 mix-blend-overlay"></div>
         </div>
-        <div className="container relative mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl mb-6">
-            Ready to Make a Difference?
-          </h2>
-          <p className="mx-auto max-w-2xl text-lg text-orange-100 mb-10">
-            Whether you want to learn, teach, or support, there is a place for you in our community. Join us today and be part of the change.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/volunteer">
-              <Button size="lg" className="w-full sm:w-auto bg-white text-orange-600 hover:bg-orange-50 border-none">
-                Join as Volunteer
-              </Button>
-            </Link>
-            <Link href="/courses">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto border-orange-400 text-white hover:bg-orange-700 hover:text-white">
-                Start Learning
-              </Button>
-            </Link>
-          </div>
+        <div className="container relative z-10 mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto"
+          >
+            <h2 className="text-4xl font-extrabold tracking-tight text-white sm:text-6xl mb-8 leading-tight">
+              Ready to Make a Difference?
+            </h2>
+            <p className="text-xl md:text-2xl text-orange-50 dark:text-orange-100/80 mb-12 font-medium">
+              Whether you want to learn, teach, or support, there is a place for you in our community. Join us today and be part of the change.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <Link href="/volunteer">
+                <Button size="lg" className="w-full sm:w-auto rounded-full text-lg h-16 px-10 bg-white text-orange-600 hover:bg-orange-50 hover:text-orange-700 hover:scale-105 shadow-[0_10px_30px_rgba(255,255,255,0.2)] border-0 transition-all duration-300">
+                  Join as Volunteer
+                </Button>
+              </Link>
+              <Link href="/courses">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full text-lg h-16 px-10 border-2 border-white/30 text-white bg-white/10 backdrop-blur-md hover:bg-white hover:text-orange-600 hover:scale-105 transition-all duration-300">
+                  Start Learning
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>

@@ -6,6 +6,23 @@ import { ProjectCard } from "@/components/ProjectCard"
 export default function ProjectsPage() {
     const projects = [
         {
+            title: "Indus AI Week 2026",
+            description: "Hassan Khan representing Amna Aman Project as CTO at Indus AI Week 2026 🇵🇰",
+            fullDescription: `Indus AI Week stands as a national platform bringing together policy, innovation, talent, and investment — and being part of this ecosystem reflects our commitment to building meaningful, inclusive technology.
+
+At AmnaAman, we believe AI should empower communities, create accessibility, and open opportunities for all. Representation at forums like this strengthens our vision and expands our impact within Pakistan’s growing AI landscape.
+
+The future of AI in Pakistan is being built today — and we are proud to contribute to that journey.`,
+            icon: Users,
+            images: [
+                "/images/indusai1.jpg",
+                "/images/indusai2.jpg",
+                "/images/indusai3.jpg",
+                "/images/indusai4.jpg",
+                "/images/indusai5.jpg"
+            ]
+        },
+        {
             title: "Muhammadi Agosh Orphanage",
             description: "A heartwarming visit to share smiles, stories, and lessons on kindness and inclusion.",
             fullDescription: `Had a wonderful time visiting Muhammadi Agosh Orphanage.

@@ -36,7 +36,7 @@ export function Navbar() {
     ]
 
     return (
-        <nav className="sticky top-0 z-50 w-full border-b border-slate-200/50 bg-white/70 backdrop-blur-xl supports-[backdrop-filter]:bg-white/50 dark:border-slate-800/50 dark:bg-slate-950/70 dark:supports-[backdrop-filter]:bg-slate-950/50 transition-all duration-300">
+        <nav className="sticky top-0 z-50 w-full border-b border-white/10 bg-white/60 backdrop-blur-2xl dark:border-white/5 dark:bg-black/40 transition-all duration-300">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex h-20 items-center justify-between">
                     <div className="flex items-center">
