@@ -191,7 +191,7 @@ export default function Home() {
           {/* Bento Box 3: Wide Horizontal (Spans 12 cols on desktop) */}
           <div className="md:col-span-12 rounded-[2.5rem] bg-slate-900 text-white overflow-hidden relative border border-slate-800 shadow-2xl mt-4 sm:mt-0">
             <div className="absolute inset-0 opacity-40 mix-blend-overlay">
-              <Image src="/images/home_feature_2.png" alt="Community" fill className="object-cover" />
+              <Image src="/images/home_feature_2_authentic.png" alt="Community" fill className="object-cover" />
             </div>
             <div className="relative z-10 p-8 sm:p-14 md:p-20 flex flex-col md:flex-row items-center justify-between gap-10">
               <div className="max-w-xl text-center md:text-left">

@@ -33,7 +33,7 @@ export default function VolunteerPage() {
                         </a>
 
                         <div className="mt-16 relative w-full aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 hidden lg:block">
-                            <Image src="/images/volunteer_hero_premium.png" alt="Community impact" fill className="object-cover" priority />
+                            <Image src="/images/volunteer_hero_authentic.png" alt="Community impact" fill className="object-cover" priority />
                         </div>
                     </div>
 

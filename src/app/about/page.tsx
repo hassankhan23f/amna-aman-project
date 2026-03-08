@@ -22,7 +22,7 @@ export default function AboutPage() {
                     </div>
 
                     <div className="flex-1 relative w-full aspect-[4/3] max-w-[500px] rounded-[3rem] overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 ml-auto">
-                        <Image src="/images/about_hero_premium.png" alt="Bridging technology" fill className="object-cover hover:scale-105 transition-transform duration-700" priority />
+                        <Image src="/images/about_hero_authentic.png" alt="Bridging technology" fill className="object-cover hover:scale-105 transition-transform duration-700" priority />
                     </div>
                 </div>
             </section>
