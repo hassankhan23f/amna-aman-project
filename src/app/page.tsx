@@ -23,10 +23,10 @@ export default function Home() {
 
       {/* 
         ========================================
-        HERO SECTION - Absolute Premium
+        HERO SECTION - Authentic & Premium
         ========================================
       */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 px-4 sm:px-6 lg:px-8 w-full max-w-[1400px] mx-auto min-h-[90vh] flex flex-col justify-center">
+      <section className="relative pt-12 pb-20 lg:pt-20 lg:pb-32 px-4 sm:px-6 lg:px-8 w-full max-w-[1400px] mx-auto flex flex-col justify-center">
 
         {/* Background Ambient Glow */}
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-bl from-orange-400/20 via-amber-300/10 to-transparent rounded-full blur-[120px] -z-10 opacity-70"></div>

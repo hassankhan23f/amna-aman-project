@@ -17,7 +17,7 @@ export default function DonatePage() {
     return (
         <div className="flex flex-col min-h-screen bg-white dark:bg-[#030712] selection:bg-orange-500/30">
             {/* Impact Hero */}
-            <section className="pt-24 lg:pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+            <section className="pt-12 lg:pt-16 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
                 <div className="relative rounded-[3rem] overflow-hidden bg-slate-900 text-white min-h-[400px] flex items-center mb-16 border border-slate-800 shadow-2xl">
                     <Image src="/images/donate_hero_premium.png" alt="Support growth" fill className="object-cover opacity-60 mix-blend-screen" priority />
                     <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent"></div>

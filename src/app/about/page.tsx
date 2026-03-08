@@ -5,7 +5,7 @@ export default function AboutPage() {
     return (
         <div className="flex flex-col min-h-screen bg-white dark:bg-[#030712] selection:bg-orange-500/30">
             {/* Minimalist Tech Hero */}
-            <section className="pt-24 lg:pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+            <section className="pt-12 lg:pt-16 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
                 <div className="flex flex-col lg:flex-row gap-12 items-center justify-between">
                     <div className="flex-1 max-w-3xl">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 text-sm font-medium text-slate-900 dark:text-slate-300 mb-8 border border-slate-200 dark:border-slate-800">

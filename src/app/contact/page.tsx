@@ -4,7 +4,7 @@ import Image from "next/image"
 export default function ContactPage() {
     return (
         <div className="flex flex-col min-h-screen bg-white dark:bg-[#030712] selection:bg-orange-500/30">
-            <section className="pt-24 lg:pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+            <section className="pt-12 lg:pt-16 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
 
                 {/* Imagery Header Block */}
                 <div className="relative w-full h-[250px] md:h-[350px] rounded-[3rem] overflow-hidden mb-16 border border-slate-200 dark:border-slate-800 shadow-xl">

@@ -49,7 +49,7 @@ export default function ProductsPage() {
     return (
         <div className="flex flex-col min-h-screen bg-white dark:bg-[#030712] selection:bg-orange-500/30">
             {/* Premium Shop Hero */}
-            <section className="relative pt-24 pb-24 lg:pt-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full overflow-hidden rounded-[3rem] mt-4 border border-slate-200 dark:border-slate-800">
+            <section className="relative pt-12 pb-24 lg:pt-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full overflow-hidden rounded-[3rem] mt-4 border border-slate-200 dark:border-slate-800">
                 <Image
                     src="/images/shop_hero_premium.png"
                     alt="Abstract Accessibility Tech"

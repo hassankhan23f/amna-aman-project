@@ -8,7 +8,7 @@ export default function VolunteerPage() {
     return (
         <div className="flex flex-col min-h-screen bg-white dark:bg-[#030712] selection:bg-orange-500/30">
             {/* Split Screen Hero */}
-            <section className="pt-24 lg:pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+            <section className="pt-12 lg:pt-16 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
                 <div className="flex flex-col lg:flex-row gap-16">
                     {/* Sticky Left: Typography & Intro */}
                     <div className="lg:w-1/2 lg:sticky lg:top-32 h-fit flex flex-col pt-4">
