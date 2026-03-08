@@ -102,13 +102,13 @@ export default function Home() {
               className="flex-1 hidden lg:block relative"
             >
               <div className="relative w-full aspect-square max-w-[600px] ml-auto">
-                <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-tr from-orange-500/20 to-amber-300/20 rotate-6 scale-105 blur-2xl dark:from-orange-500/10 dark:to-amber-300/10"></div>
+                <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-tr from-orange-500/30 to-amber-300/30 rotate-3 scale-105 blur-3xl dark:from-orange-500/20 dark:to-amber-300/20"></div>
                 <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden border border-white/20 dark:border-white/10 shadow-2xl glass-dark z-10 hidden dark:block">
-                  <Image src="/images/home.jpg" alt="Inclusive ecosystem" fill className="object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" priority />
+                  <Image src="/images/home_hero_new.png" alt="Inclusive ecosystem" fill className="object-cover opacity-90 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" priority />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-transparent"></div>
                 </div>
                 <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden border border-white/40 shadow-2xl z-10 dark:hidden">
-                  <Image src="/images/home.jpg" alt="Inclusive ecosystem" fill className="object-cover" priority />
+                  <Image src="/images/home_hero_new.png" alt="Inclusive ecosystem" fill className="object-cover" priority />
                 </div>
 
                 {/* Floating Badge */}

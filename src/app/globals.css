@@ -3,8 +3,10 @@
 @variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #09090b;
+  --background: #f8fafc;
+  /* Softer slate-50 off-white instead of pure white */
+  --foreground: #0f172a;
+  /* Slightly softer black for better contrast */
   --font-sans: var(--font-inter);
   --font-heading: var(--font-outfit);
   --primary: #f97316;

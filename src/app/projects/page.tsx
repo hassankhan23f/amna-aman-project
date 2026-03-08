@@ -1,7 +1,8 @@
 "use client"
 
-import { Code, Globe, Users, Briefcase } from "lucide-react"
+import { Code, Globe, Users, Briefcase, Calendar } from "lucide-react"
 import { ProjectCard } from "@/components/ProjectCard"
+import Image from "next/image"
 
 export default function ProjectsPage() {
     const projects = [
@@ -98,33 +99,54 @@ The future of AI in Pakistan is being built today — and we are proud to contri
     ]
 
     return (
-        <div className="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
-            <div className="text-center">
-                <h1 className="mb-4 text-4xl font-bold tracking-tight text-slate-900 dark:text-white">
-                    Our Projects
-                </h1>
-                <p className="mx-auto mb-12 max-w-2xl text-lg text-slate-600 dark:text-slate-300">
-                    We are working on several initiatives to empower individuals with diverse abilities.
-                </p>
-            </div>
+        <div className="flex flex-col min-h-screen bg-white dark:bg-[#030712] selection:bg-orange-500/30">
+            {/* Ultra Premium Events Hero */}
+            <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full overflow-hidden rounded-[3rem] mt-6 border border-slate-200 dark:border-slate-800">
+                <Image
+                    src="/images/events_hero_premium.png"
+                    alt="Abstract Tech Events"
+                    fill
+                    className="object-cover opacity-90 dark:opacity-60"
+                    priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent dark:from-[#030712] dark:via-[#030712]/80 dark:to-transparent"></div>
 
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
-                {projects.map((project, index) => (
-                    <ProjectCard
-                        key={index}
-                        title={project.title}
-                        description={project.description}
-                        icon={project.icon}
-                        index={index}
-                        // @ts-ignore
-                        fullDescription={project.fullDescription}
-                        // @ts-ignore
-                        images={project.images}
-                        // @ts-ignore
-                        link={project.link}
-                    />
-                ))}
-            </div>
+                <div className="relative z-10 text-center max-w-3xl mx-auto pt-20">
+                    <div className="inline-flex items-center justify-center mb-6 px-4 py-1.5 rounded-full bg-orange-50 dark:bg-orange-500/10 border border-orange-200 dark:border-orange-500/20 text-orange-600 dark:text-orange-400 font-medium text-sm backdrop-blur-md">
+                        <Calendar size={16} className="mr-2" />
+                        Our Initiatives
+                    </div>
+                    <h1 className="text-5xl sm:text-7xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-6">
+                        Milestones of <br className="hidden sm:block" />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">Impact.</span>
+                    </h1>
+                    <p className="text-xl text-slate-700 dark:text-slate-300">
+                        Explore our latest events, projects, and community-driven initiatives that are shaping the future of accessibility in Pakistan.
+                    </p>
+                </div>
+            </section>
+
+            {/* Events Grid */}
+            <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+                <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+                    {projects.map((project, index) => (
+                        <div key={index} className="transform transition-all duration-300 hover:-translate-y-2">
+                            <ProjectCard
+                                title={project.title}
+                                description={project.description}
+                                icon={project.icon}
+                                index={index}
+                                // @ts-ignore
+                                fullDescription={project.fullDescription}
+                                // @ts-ignore
+                                images={project.images}
+                                // @ts-ignore
+                                link={project.link}
+                            />
+                        </div>
+                    ))}
+                </div>
+            </section>
         </div>
     )
 }
