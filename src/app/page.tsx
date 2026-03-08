@@ -40,48 +40,67 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="inline-flex items-center justify-center lg:justify-start mb-8 px-5 py-2 rounded-full border border-orange-200 dark:border-orange-500/30 bg-orange-50/50 dark:bg-orange-500/10 backdrop-blur-md text-orange-600 dark:text-orange-400 font-semibold text-sm shadow-sm"
+              className="inline-flex items-center justify-center lg:justify-start mb-6 px-5 py-2 rounded-full border border-orange-200 dark:border-orange-500/30 bg-orange-50/50 dark:bg-orange-500/10 backdrop-blur-md text-orange-600 dark:text-orange-400 font-semibold text-sm shadow-sm"
             >
-              <Heart size={16} className="mr-2" />
-              100% Community Driven Initiative
+              <Shield size={16} className="mr-2" />
+              Empowering People with Disabilities in Pakistan
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
-              className="text-6xl sm:text-7xl lg:text-8xl font-black tracking-tighter text-slate-900 dark:text-white leading-[0.95] mb-8"
+              className="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tighter text-slate-900 dark:text-white leading-[1] mb-6"
             >
-              Reimagining<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">Accessibility.</span>
+              Technology That<br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">Includes Everyone.</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="text-xl sm:text-2xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0"
+              className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              Creating an ecosystem of inclusive technology, education, and support for individuals with diverse abilities in Pakistan.
+              We build <strong className="text-slate-900 dark:text-white">assistive devices</strong>, run <strong className="text-slate-900 dark:text-white">inclusive education programs</strong>, and create <strong className="text-slate-900 dark:text-white">accessible software</strong> for children and adults with special needs.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-              className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start mb-8"
             >
               <Link href="/projects" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full h-16 px-10 rounded-full bg-slate-900 hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-100 text-lg font-bold transition-all hover:scale-105 shadow-xl">
-                  Explore Our Work
+                <Button size="lg" className="w-full h-14 px-8 rounded-full bg-orange-600 hover:bg-orange-700 text-lg font-bold transition-all hover:scale-105 shadow-xl text-white">
+                  See Our Projects
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Link href="/volunteer" className="w-full sm:w-auto">
-                <Button size="lg" variant="outline" className="w-full h-16 px-10 rounded-full border-2 border-slate-200 hover:border-orange-500 hover:text-orange-600 dark:border-slate-800 dark:text-white dark:hover:border-orange-500 dark:hover:text-orange-400 dark:hover:bg-transparent text-lg font-bold transition-all bg-transparent">
-                  Join the Movement
+              <Link href="/donate" className="w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="w-full h-14 px-8 rounded-full border-2 border-slate-200 hover:border-orange-500 hover:text-orange-600 dark:border-slate-800 dark:text-white dark:hover:border-orange-500 dark:hover:text-orange-400 dark:hover:bg-transparent text-lg font-bold transition-all bg-transparent">
+                  <Heart size={18} className="mr-2" /> Support a Child
                 </Button>
               </Link>
+            </motion.div>
+
+            {/* Trust Signals */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="flex flex-wrap items-center gap-3 justify-center lg:justify-start"
+            >
+              {[
+                { label: "5,000+ Lives Impacted", icon: Users },
+                { label: "SafeBand Device", icon: Shield },
+                { label: "Free Workshops", icon: Heart },
+              ].map(({ label, icon: Icon }) => (
+                <div key={label} className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-100 dark:bg-slate-800/50 text-xs sm:text-sm font-medium text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
+                  <Icon size={14} className="text-orange-500 shrink-0" />
+                  {label}
+                </div>
+              ))}
             </motion.div>
           </div>
 
