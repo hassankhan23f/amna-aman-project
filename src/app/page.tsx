@@ -222,6 +222,11 @@ export default function Home() {
         ========================================
       */}
       <section className="py-24 sm:py-32 relative w-full overflow-hidden bg-slate-50 dark:bg-[#080c16]">
+        {/* Subtle Inclusion Pattern Background */}
+        <div className="absolute inset-0 opacity-[0.15] dark:opacity-10 pointer-events-none mix-blend-multiply dark:mix-blend-screen">
+          <Image src="/images/bg_inclusion_pattern.png" alt="Inclusion Pattern" fill className="object-cover" />
+        </div>
+
         {/* Abstract typography background */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] text-center pointer-events-none opacity-[0.03] dark:opacity-[0.02]">
           <h2 className="text-[20rem] font-black leading-none whitespace-nowrap">VOICES OF IMPACT</h2>
@@ -270,10 +275,10 @@ export default function Home() {
       */}
       <section className="relative py-32 sm:py-48 mt-12 overflow-hidden bg-[#030712]">
         <Image
-          src="/images/home_cta_bg.png"
-          alt="Dark abstract background"
+          src="/images/bg_community_hands.png"
+          alt="Diverse community hands together"
           fill
-          className="object-cover opacity-60 mix-blend-screen"
+          className="object-cover opacity-50 mix-blend-screen"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-[#030712]/50"></div>
 
