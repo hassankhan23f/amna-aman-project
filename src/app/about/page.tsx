@@ -5,22 +5,24 @@ export default function AboutPage() {
     return (
         <div className="flex flex-col min-h-screen bg-white dark:bg-[#030712] selection:bg-orange-500/30">
             {/* Minimalist Tech Hero */}
-            <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
-                <div className="flex flex-col md:flex-row gap-12 items-end justify-between">
-                    <div className="max-w-3xl">
+            <section className="pt-24 lg:pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+                <div className="flex flex-col lg:flex-row gap-12 items-center justify-between">
+                    <div className="flex-1 max-w-3xl">
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 text-sm font-medium text-slate-900 dark:text-slate-300 mb-8 border border-slate-200 dark:border-slate-800">
                             <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse"></span>
                             Our Story
                         </div>
-                        <h1 className="text-5xl sm:text-7xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1]">
+                        <h1 className="text-5xl sm:text-7xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-6">
                             Bridging the gap <br className="hidden sm:block" />
                             <span className="text-slate-400 dark:text-slate-500">with technology.</span>
                         </h1>
-                    </div>
-                    <div className="max-w-sm pb-2">
-                        <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                        <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl">
                             AmnaAman is dedicated to creating an inclusive world where technology empowers every individual, regardless of ability.
                         </p>
+                    </div>
+
+                    <div className="flex-1 relative w-full aspect-[4/3] max-w-[500px] rounded-[3rem] overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 ml-auto">
+                        <Image src="/images/about_hero_premium.png" alt="Bridging technology" fill className="object-cover hover:scale-105 transition-transform duration-700" priority />
                     </div>
                 </div>
             </section>

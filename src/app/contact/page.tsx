@@ -1,16 +1,26 @@
 import { Mail, MapPin, Phone, ArrowUpRight } from "lucide-react"
+import Image from "next/image"
 
 export default function ContactPage() {
     return (
         <div className="flex flex-col min-h-screen bg-white dark:bg-[#030712] selection:bg-orange-500/30">
-            <section className="pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+            <section className="pt-24 lg:pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
 
-                {/* Editorial Header */}
-                <div className="mb-20">
-                    <h1 className="text-6xl sm:text-8xl font-bold tracking-tighter text-slate-900 dark:text-white mb-6">
-                        Say Hello.
-                    </h1>
-                    <p className="max-w-xl text-xl text-slate-600 dark:text-slate-400">
+                {/* Imagery Header Block */}
+                <div className="relative w-full h-[250px] md:h-[350px] rounded-[3rem] overflow-hidden mb-16 border border-slate-200 dark:border-slate-800 shadow-xl">
+                    <Image src="/images/contact_hero_premium.png" alt="Contact Network" fill className="object-cover" priority />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-8 left-8 sm:bottom-12 sm:left-12">
+                        <div className="text-white/80 font-medium tracking-widest uppercase text-sm mb-2">Get in touch</div>
+                        <h1 className="text-5xl sm:text-7xl font-bold tracking-tighter text-white">
+                            Say Hello.
+                        </h1>
+                    </div>
+                </div>
+
+                {/* Editorial Description */}
+                <div className="mb-16">
+                    <p className="max-w-2xl text-xl text-slate-600 dark:text-slate-400 leading-relaxed font-medium">
                         Whether you want to partner with us, volunteer, or just learn more about our mission, our doors are always open.
                     </p>
                 </div>

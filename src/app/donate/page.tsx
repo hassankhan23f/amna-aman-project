@@ -3,6 +3,8 @@
 import { CreditCard, Smartphone, Check, Copy } from "lucide-react"
 import { useState } from "react"
 
+import Image from "next/image"
+
 export default function DonatePage() {
     const [copied, setCopied] = useState<string | null>(null)
 
@@ -15,16 +17,22 @@ export default function DonatePage() {
     return (
         <div className="flex flex-col min-h-screen bg-white dark:bg-[#030712] selection:bg-orange-500/30">
             {/* Impact Hero */}
-            <section className="pt-32 pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full text-center">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900 text-sm font-medium text-slate-900 dark:text-slate-300 mb-8 border border-slate-200 dark:border-slate-800">
-                    Your Impact
+            <section className="pt-24 lg:pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+                <div className="relative rounded-[3rem] overflow-hidden bg-slate-900 text-white min-h-[400px] flex items-center mb-16 border border-slate-800 shadow-2xl">
+                    <Image src="/images/donate_hero_premium.png" alt="Support growth" fill className="object-cover opacity-60 mix-blend-screen" priority />
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-transparent"></div>
+                    <div className="relative z-10 p-8 sm:p-16 max-w-3xl">
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-sm font-medium text-white mb-8 border border-white/20">
+                            Your Impact
+                        </div>
+                        <h1 className="text-5xl sm:text-7xl font-bold tracking-tight text-white leading-[1.1] mb-6">
+                            Fuel the <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-300">future.</span>
+                        </h1>
+                        <p className="text-lg sm:text-xl text-slate-300 leading-relaxed max-w-xl">
+                            100% of your donation directly funds educational resources, accessible tech, and community workshops for our students.
+                        </p>
+                    </div>
                 </div>
-                <h1 className="text-5xl sm:text-7xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-6 max-w-4xl mx-auto">
-                    Fuel the <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">future.</span>
-                </h1>
-                <p className="text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                    100% of your donation directly funds educational resources, accessible tech, and community workshops for our students.
-                </p>
             </section>
 
             {/* Premium Payment Cards Section */}

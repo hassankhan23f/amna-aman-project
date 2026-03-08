@@ -2,15 +2,17 @@
 
 import { ArrowRight, Heart, Users, Award, ExternalLink } from "lucide-react"
 
+import Image from "next/image"
+
 export default function VolunteerPage() {
     return (
         <div className="flex flex-col min-h-screen bg-white dark:bg-[#030712] selection:bg-orange-500/30">
             {/* Split Screen Hero */}
-            <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+            <section className="pt-24 lg:pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
                 <div className="flex flex-col lg:flex-row gap-16">
                     {/* Sticky Left: Typography & Intro */}
-                    <div className="lg:w-1/2 lg:sticky lg:top-32 h-fit">
-                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-50 dark:bg-orange-500/10 text-sm font-medium text-orange-600 dark:text-orange-400 mb-8 border border-orange-200 dark:border-orange-500/20">
+                    <div className="lg:w-1/2 lg:sticky lg:top-32 h-fit flex flex-col pt-4">
+                        <div className="inline-flex items-center w-fit gap-2 px-3 py-1 rounded-full bg-orange-50 dark:bg-orange-500/10 text-sm font-medium text-orange-600 dark:text-orange-400 mb-8 border border-orange-200 dark:border-orange-500/20">
                             Join the movement
                         </div>
                         <h1 className="text-5xl sm:text-7xl font-bold tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-6">
@@ -24,11 +26,15 @@ export default function VolunteerPage() {
                             href="https://docs.google.com/forms/d/e/1FAIpQLSeIbxmCRT8DALf50PmpOwdB-FMmaZzsgkcmNo0wsafD_l11_Q/viewform?usp=publish-editor"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center rounded-xl bg-slate-900 dark:bg-white px-8 py-4 text-sm font-bold text-white dark:text-slate-900 transition-transform hover:scale-105"
+                            className="inline-flex items-center justify-center rounded-xl bg-slate-900 dark:bg-white px-8 py-4 text-sm font-bold text-white dark:text-slate-900 transition-transform hover:scale-105 w-fit"
                         >
                             Apply to Volunteer
                             <ExternalLink size={16} className="ml-2" />
                         </a>
+
+                        <div className="mt-16 relative w-full aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl border border-slate-200 dark:border-slate-800 hidden lg:block">
+                            <Image src="/images/volunteer_hero_premium.png" alt="Community impact" fill className="object-cover" priority />
+                        </div>
                     </div>
 
                     {/* Scrolling Right: Values & Steps */}
