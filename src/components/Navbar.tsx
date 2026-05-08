@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation"
 import { Menu, X, Sun, Moon } from "lucide-react"
 import { useState, useEffect, useCallback } from "react"
 import { useTheme } from "next-themes"
-import { createClient } from "@/utils/supabase/client"
 import { motion, AnimatePresence } from "framer-motion"
 
 export function Navbar() {
@@ -14,17 +13,10 @@ export function Navbar() {
     const pathname = usePathname()
     const { theme, setTheme } = useTheme()
     const [mounted, setMounted] = useState(false)
-    const [user, setUser] = useState<any>(null)
     const [scrolled, setScrolled] = useState(false)
 
     useEffect(() => {
         setMounted(true)
-        const supabase = createClient()
-        const getUser = async () => {
-            const { data: { user } } = await supabase.auth.getUser()
-            setUser(user)
-        }
-        getUser()
     }, [])
 
     const handleScroll = useCallback(() => {
@@ -104,21 +96,12 @@ export function Navbar() {
                                 </button>
                             )}
 
-                            {user ? (
-                                <Link
-                                    href="/dashboard"
-                                    className="rounded-full bg-orange-600 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:bg-orange-700 hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-slate-950"
-                                >
-                                    Dashboard
-                                </Link>
-                            ) : (
-                                <Link
-                                    href="/login"
-                                    className="rounded-full bg-orange-600 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:bg-orange-700 hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-slate-950"
-                                >
-                                    Login
-                                </Link>
-                            )}
+                            <Link
+                                href="/careers"
+                                className="rounded-full bg-orange-600 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-all hover:bg-orange-700 hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 dark:focus:ring-offset-slate-950"
+                            >
+                                Careers
+                            </Link>
                         </div>
                     </div>
 
@@ -181,23 +164,13 @@ export function Navbar() {
                                 )}
                             </div>
                             <div className="mt-4 px-3 pb-4">
-                                {user ? (
-                                    <Link
-                                        href="/dashboard"
-                                        onClick={() => setIsOpen(false)}
-                                        className="block w-full rounded-full bg-orange-600 px-4 py-3 text-center text-sm font-medium text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                                    >
-                                        Dashboard
-                                    </Link>
-                                ) : (
-                                    <Link
-                                        href="/login"
-                                        onClick={() => setIsOpen(false)}
-                                        className="block w-full rounded-full bg-orange-600 px-4 py-3 text-center text-sm font-medium text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500"
-                                    >
-                                        Login
-                                    </Link>
-                                )}
+                                <Link
+                                    href="/careers"
+                                    onClick={() => setIsOpen(false)}
+                                    className="block w-full rounded-full bg-orange-600 px-4 py-3 text-center text-sm font-medium text-white hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                                >
+                                    Careers
+                                </Link>
                             </div>
                         </div>
                     </motion.div>

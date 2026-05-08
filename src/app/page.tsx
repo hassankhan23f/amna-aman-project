@@ -179,25 +179,39 @@ export default function Home() {
 
           {/* Bento Box 3: Wide Horizontal (Spans 12 cols on desktop) */}
           <div className="md:col-span-12 rounded-[2.5rem] bg-slate-900 text-white overflow-hidden relative border border-slate-800 shadow-2xl mt-4 sm:mt-0">
-            <div className="absolute inset-0 opacity-40 mix-blend-overlay">
+            <div className="absolute inset-0 opacity-20 mix-blend-overlay">
               <Image src="/images/home_feature_2_authentic.png" alt="Community" fill className="object-cover" />
             </div>
-            <div className="relative z-10 p-8 sm:p-14 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10">
-              <div className="max-w-xl text-center md:text-left">
-                <h3 className="text-3xl sm:text-4xl font-black mb-4 tracking-tight">The Inclusive Ecosystem.</h3>
+            <div className="relative z-10 p-8 sm:p-14 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-10">
+              <div className="max-w-xl text-center lg:text-left flex-1">
+                <div className="inline-flex items-center justify-center lg:justify-start mb-4 px-4 py-1.5 rounded-full border border-orange-500/30 bg-orange-500/10 text-orange-400 font-semibold text-sm">
+                  <Star size={14} className="mr-2" />
+                  Pioneering Initiative
+                </div>
+                <h3 className="text-3xl sm:text-4xl font-black mb-4 tracking-tight">Pakistan's first skill institute for special persons.</h3>
                 <p className="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed">
-                  A comprehensive framework extending from early assessment labs to job placement networks for neurological diversities.
+                  A comprehensive framework extending from early assessment labs to advanced job placement networks, ensuring lifelong opportunities.
                 </p>
-                <Link href="/about">
-                  <Button className="bg-white text-slate-900 hover:bg-orange-500 hover:text-white rounded-full px-8 py-6 text-lg font-bold transition-colors">
-                    Discover Our Vision
+                <Link href="/careers">
+                  <Button className="bg-orange-600 hover:bg-orange-700 text-white rounded-full px-8 py-6 text-lg font-bold transition-colors">
+                    Join Our Job Fair
                   </Button>
                 </Link>
               </div>
 
-              {/* Video/Play Trigger */}
-              <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border border-white/20 bg-white/10 backdrop-blur-md flex items-center justify-center cursor-pointer hover:bg-white/20 hover:scale-110 transition-all duration-300 shadow-2xl flex-shrink-0">
-                <PlayCircle size={48} className="text-white/90 ml-2" />
+              {/* YouTube Video Embed */}
+              <div className="w-full lg:w-1/2 aspect-video rounded-2xl overflow-hidden border border-slate-700 shadow-2xl z-20">
+                <iframe 
+                  width="100%" 
+                  height="100%" 
+                  src="https://www.youtube.com/embed/tnw8HEh7cs0?si=V6lhH3XN5xCVWLkh" 
+                  title="AmnaAman 3D Model" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
               </div>
             </div>
           </div>
