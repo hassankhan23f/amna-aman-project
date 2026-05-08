@@ -1,4 +1,6 @@
 import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { User, Mail, Phone, UploadCloud, Send } from "lucide-react"
 
 export const metadata = {
     title: "Careers & Job Fair | AmnaAman",
@@ -33,32 +35,126 @@ export default function CareersPage() {
 
             {/* 
                 ========================================
-                APPLICATION FORM EMBED
+                NATIVE APPLICATION FORM
                 ========================================
             */}
-            <section className="py-12 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto w-full relative z-10">
-                <div className="bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 rounded-[2.5rem] p-4 sm:p-8 shadow-2xl overflow-hidden relative">
-                    {/* Decorative Elements */}
-                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-400 to-amber-400"></div>
+            <section className="py-12 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full relative z-10">
+                <div className="bg-white/70 dark:bg-slate-900/60 backdrop-blur-2xl border border-slate-200 dark:border-slate-800 rounded-[2.5rem] p-6 sm:p-12 shadow-2xl relative overflow-hidden">
+                    {/* Decorative Top Accent */}
+                    <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-orange-500 to-amber-500"></div>
                     
-                    <div className="text-center mb-10 mt-4">
-                        <h2 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">Job Fair Application</h2>
-                        <p className="text-slate-600 dark:text-slate-400 mt-2">Please fill out the form below and attach your CV (PDF preferred).</p>
+                    <div className="text-center mb-10 mt-2">
+                        <h2 className="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white tracking-tight">Job Fair Application</h2>
+                        <p className="text-slate-600 dark:text-slate-400 mt-3 text-lg">
+                            Please fill out your details and attach your CV. We will get back to you shortly.
+                        </p>
                     </div>
 
-                    {/* Google Form Embed */}
-                    <div className="relative w-full rounded-2xl overflow-hidden bg-white dark:bg-slate-950 flex justify-center items-center min-h-[800px]">
-                        {/* Replace the src URL with the actual Google Form URL */}
-                        <iframe 
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSeIbxmCRT8DALf50PmpOwdB-FMmaZzsgkcmNo0wsafD_l11_Q/viewform?embedded=true" 
-                            width="100%" 
-                            height="900" 
-                            className="border-0 bg-transparent w-full"
-                            title="Job Fair Application Form"
-                        >
-                            Loading form...
-                        </iframe>
-                    </div>
+                    {/* 
+                        Replace "YOUR_GETFORM_ENDPOINT_HERE" with your actual Getform.io URL.
+                        The 'enctype="multipart/form-data"' is required for file uploads to work!
+                    */}
+                    <form 
+                        action="YOUR_GETFORM_ENDPOINT_HERE" 
+                        method="POST" 
+                        encType="multipart/form-data"
+                        className="space-y-6"
+                    >
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {/* Full Name */}
+                            <div className="space-y-2">
+                                <label htmlFor="name" className="text-sm font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-2">
+                                    <User size={16} className="text-orange-500" />
+                                    Full Name <span className="text-red-500">*</span>
+                                </label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    required 
+                                    placeholder="John Doe"
+                                    className="w-full bg-slate-50 dark:bg-[#030712] border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all placeholder:text-slate-400"
+                                />
+                            </div>
+
+                            {/* Phone Number */}
+                            <div className="space-y-2">
+                                <label htmlFor="phone" className="text-sm font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-2">
+                                    <Phone size={16} className="text-orange-500" />
+                                    Phone Number <span className="text-red-500">*</span>
+                                </label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    required 
+                                    placeholder="+92 300 1234567"
+                                    className="w-full bg-slate-50 dark:bg-[#030712] border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all placeholder:text-slate-400"
+                                />
+                            </div>
+                        </div>
+
+                        {/* Email Address */}
+                        <div className="space-y-2">
+                            <label htmlFor="email" className="text-sm font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-2">
+                                <Mail size={16} className="text-orange-500" />
+                                Email Address <span className="text-red-500">*</span>
+                            </label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                required 
+                                placeholder="john@example.com"
+                                className="w-full bg-slate-50 dark:bg-[#030712] border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all placeholder:text-slate-400"
+                            />
+                        </div>
+
+                        {/* Cover Letter / Message */}
+                        <div className="space-y-2">
+                            <label htmlFor="message" className="text-sm font-semibold text-slate-700 dark:text-slate-300">
+                                Cover Letter / Why do you want to join us?
+                            </label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows={4}
+                                placeholder="Tell us briefly about your experience and motivation..."
+                                className="w-full bg-slate-50 dark:bg-[#030712] border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all placeholder:text-slate-400 resize-none"
+                            ></textarea>
+                        </div>
+
+                        {/* File Upload (CV) */}
+                        <div className="space-y-2 pt-2">
+                            <label htmlFor="cv" className="text-sm font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-2">
+                                <UploadCloud size={16} className="text-orange-500" />
+                                Upload CV (PDF or DOCX) <span className="text-red-500">*</span>
+                            </label>
+                            <div className="relative">
+                                <input 
+                                    type="file" 
+                                    id="cv" 
+                                    name="cv" 
+                                    accept=".pdf,.doc,.docx"
+                                    required 
+                                    className="w-full bg-slate-50 dark:bg-[#030712] border border-dashed border-slate-300 dark:border-slate-700 rounded-xl px-4 py-8 text-slate-600 dark:text-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all file:mr-4 file:py-2.5 file:px-6 file:rounded-full file:border-0 file:text-sm file:font-bold file:bg-orange-100 file:text-orange-700 dark:file:bg-orange-500/20 dark:file:text-orange-400 hover:file:bg-orange-200 cursor-pointer"
+                                />
+                            </div>
+                        </div>
+
+                        {/* Submit Button */}
+                        <div className="pt-6">
+                            <Button 
+                                type="submit" 
+                                className="w-full sm:w-auto h-14 px-10 rounded-full bg-orange-600 hover:bg-orange-700 text-white text-lg font-bold shadow-xl shadow-orange-500/20 transition-all hover:-translate-y-1"
+                            >
+                                Submit Application <Send size={18} className="ml-2" />
+                            </Button>
+                            <p className="text-xs text-center sm:text-left text-slate-500 mt-4">
+                                By submitting this application, you agree to our privacy policy and terms of service.
+                            </p>
+                        </div>
+                    </form>
                 </div>
             </section>
         </div>
