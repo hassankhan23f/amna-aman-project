@@ -113,7 +113,7 @@ export default function Home() {
           >
             <div className="relative w-full aspect-square md:aspect-[4/3] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-xl border border-black/5 dark:border-white/10 group">
               <Image
-                src="/images/home_hero_authentic.png"
+                src="/images/home_hero_authentic.jpg"
                 alt="Diverse individuals with disabilities collaborating in a modern tech workspace"
                 fill
                 className="object-cover transform group-hover:scale-105 transition-transform duration-1000"
@@ -141,7 +141,7 @@ export default function Home() {
           {/* Bento Box 1: Large Visual Feature (Spans 8 cols on desktop) */}
           <div className="md:col-span-8 relative rounded-[2.5rem] overflow-hidden bg-slate-100 dark:bg-slate-900 min-h-[400px] group border border-slate-200 dark:border-slate-800">
             <Image
-              src="/images/home_feature_1_authentic.png"
+              src="/images/image1.jpeg"
               alt="Young person with special needs using assistive technology"
               fill
               className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
@@ -180,7 +180,7 @@ export default function Home() {
           {/* Bento Box 3: Wide Horizontal (Spans 12 cols on desktop) */}
           <div className="md:col-span-12 rounded-[2.5rem] bg-slate-900 text-white overflow-hidden relative border border-slate-800 shadow-2xl mt-4 sm:mt-0">
             <div className="absolute inset-0 opacity-20 mix-blend-overlay">
-              <Image src="/images/home_feature_2_authentic.png" alt="Community" fill className="object-cover" />
+              <Image src="/images/image2.jpeg" alt="Community" fill className="object-cover" />
             </div>
             <div className="relative z-10 p-8 sm:p-14 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-10">
               <div className="max-w-xl text-center lg:text-left flex-1">

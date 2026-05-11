@@ -51,11 +51,11 @@ export default function CareersPage() {
                     </div>
 
                     {/* 
-                        Replace "YOUR_GETFORM_ENDPOINT_HERE" with your actual Getform.io URL.
+                        Form configured with Getform.io endpoint provided by the user.
                         The 'enctype="multipart/form-data"' is required for file uploads to work!
                     */}
                     <form 
-                        action="YOUR_GETFORM_ENDPOINT_HERE" 
+                        action="https://forminit.com/f/psrzeb34kh6" 
                         method="POST" 
                         encType="multipart/form-data"
                         className="space-y-6"
