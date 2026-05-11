@@ -70,7 +70,7 @@ export default function CareersPage() {
                                 <input 
                                     type="text" 
                                     id="name" 
-                                    name="name" 
+                                    name="fi-sender-fullName" 
                                     required 
                                     placeholder="John Doe"
                                     className="w-full bg-slate-50 dark:bg-[#030712] border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all placeholder:text-slate-400"
@@ -86,7 +86,7 @@ export default function CareersPage() {
                                 <input 
                                     type="tel" 
                                     id="phone" 
-                                    name="phone" 
+                                    name="fi-sender-phone" 
                                     required 
                                     placeholder="+92 300 1234567"
                                     className="w-full bg-slate-50 dark:bg-[#030712] border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all placeholder:text-slate-400"
@@ -103,7 +103,7 @@ export default function CareersPage() {
                             <input 
                                 type="email" 
                                 id="email" 
-                                name="email" 
+                                name="fi-sender-email" 
                                 required 
                                 placeholder="john@example.com"
                                 className="w-full bg-slate-50 dark:bg-[#030712] border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all placeholder:text-slate-400"
@@ -117,7 +117,7 @@ export default function CareersPage() {
                             </label>
                             <textarea 
                                 id="message" 
-                                name="message" 
+                                name="fi-text-message" 
                                 rows={4}
                                 placeholder="Tell us briefly about your experience and motivation..."
                                 className="w-full bg-slate-50 dark:bg-[#030712] border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all placeholder:text-slate-400 resize-none"
@@ -134,7 +134,7 @@ export default function CareersPage() {
                                 <input 
                                     type="file" 
                                     id="cv" 
-                                    name="cv" 
+                                    name="fi-file-cv" 
                                     accept=".pdf,.doc,.docx"
                                     required 
                                     className="w-full bg-slate-50 dark:bg-[#030712] border border-dashed border-slate-300 dark:border-slate-700 rounded-xl px-4 py-8 text-slate-600 dark:text-slate-400 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all file:mr-4 file:py-2.5 file:px-6 file:rounded-full file:border-0 file:text-sm file:font-bold file:bg-orange-100 file:text-orange-700 dark:file:bg-orange-500/20 dark:file:text-orange-400 hover:file:bg-orange-200 cursor-pointer"
