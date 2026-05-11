@@ -88,9 +88,12 @@ export default function CareersPage() {
                                     id="phone" 
                                     name="fi-sender-phone" 
                                     required 
+                                    pattern="^\+[1-9]\d{10,14}$"
+                                    title="Please use international format starting with +, e.g. +923001234567"
                                     placeholder="+92 300 1234567"
                                     className="w-full bg-slate-50 dark:bg-[#030712] border border-slate-200 dark:border-slate-800 rounded-xl px-4 py-3.5 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-orange-500 transition-all placeholder:text-slate-400"
                                 />
+                                <p className="text-xs text-slate-500 mt-1">Must include country code (e.g. +92)</p>
                             </div>
                         </div>
 
