@@ -145,20 +145,19 @@ The future of AI in Pakistan is being built today — and we are proud to contri
             <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
                 <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
                     {projects.map((project, index) => (
-                        <div key={index} className="transform transition-all duration-300 hover:-translate-y-2">
-                            <ProjectCard
-                                title={project.title}
-                                description={project.description}
-                                icon={project.icon}
-                                index={index}
-                                // @ts-ignore
-                                fullDescription={project.fullDescription}
-                                // @ts-ignore
-                                images={project.images}
-                                // @ts-ignore
-                                link={project.link}
-                            />
-                        </div>
+                        <ProjectCard
+                            key={index}
+                            title={project.title}
+                            description={project.description}
+                            icon={project.icon}
+                            index={index}
+                            // @ts-ignore
+                            fullDescription={project.fullDescription}
+                            // @ts-ignore
+                            images={project.images}
+                            // @ts-ignore
+                            link={project.link}
+                        />
                     ))}
                 </div>
             </section>
