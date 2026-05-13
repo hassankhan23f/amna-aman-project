@@ -38,64 +38,17 @@ export default function CareersPage() {
                 NATIVE APPLICATION FORM (ULTRA PREMIUM)
                 ========================================
             */}
-            <section className="py-12 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto w-full relative z-10">
-                <div className="bg-white dark:bg-[#0A0E17] border border-slate-200 dark:border-slate-800/60 rounded-[2.5rem] shadow-2xl shadow-slate-200/50 dark:shadow-none flex flex-col lg:flex-row overflow-hidden relative group">
+            <section className="py-12 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full relative z-10">
+                <div className="bg-white/90 dark:bg-[#0A0E17]/90 backdrop-blur-3xl border border-slate-200 dark:border-slate-800/60 rounded-[2.5rem] shadow-2xl shadow-slate-200/50 dark:shadow-none overflow-hidden relative group p-8 sm:p-14">
                     
                     {/* Subtle animated border gradient */}
                     <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-transparent to-amber-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 rounded-[2.5rem] pointer-events-none"></div>
 
-                    {/* Left Sidebar (Info) */}
-                    <div className="lg:w-2/5 bg-slate-900 text-white p-10 sm:p-14 flex flex-col justify-between relative overflow-hidden">
-                        {/* Background abstract shape */}
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500 rounded-full mix-blend-multiply filter blur-[80px] opacity-40 translate-x-1/3 -translate-y-1/3"></div>
-                        <div className="absolute bottom-0 left-0 w-64 h-64 bg-amber-500 rounded-full mix-blend-multiply filter blur-[80px] opacity-40 -translate-x-1/3 translate-y-1/3"></div>
-
-                        <div className="relative z-10">
-                            <h2 className="text-3xl sm:text-4xl font-black tracking-tight mb-4">
-                                Join the <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-amber-400">
-                                    Movement.
-                                </span>
-                            </h2>
-                            <p className="text-slate-400 text-lg leading-relaxed mb-10">
-                                We're always looking for passionate individuals ready to empower communities and build an inclusive future.
-                            </p>
-
-                            <div className="space-y-8">
-                                <div className="flex items-start gap-4">
-                                    <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                                        <User size={20} className="text-orange-400" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-white">Equal Opportunity</h3>
-                                        <p className="text-sm text-slate-400 mt-1">We strongly encourage candidates with diverse abilities to apply.</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-start gap-4">
-                                    <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                                        <Zap size={20} className="text-orange-400" />
-                                    </div>
-                                    <div>
-                                        <h3 className="font-bold text-white">Fast-Paced Growth</h3>
-                                        <p className="text-sm text-slate-400 mt-1">Work directly with cutting-edge tech like SafeBand and AI modules.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="relative z-10 mt-12 pt-8 border-t border-white/10">
-                            <p className="text-sm text-slate-400">
-                                Need help? Contact us at<br/>
-                                <a href="mailto:careers@amnaaman.org" className="text-orange-400 hover:text-orange-300 font-medium transition-colors">careers@amnaaman.org</a>
-                            </p>
-                        </div>
-                    </div>
-
                     {/* Right Side (Form) */}
-                    <div className="lg:w-3/5 p-10 sm:p-14 relative z-10 bg-white/50 dark:bg-slate-900/50 backdrop-blur-3xl">
-                        <div className="mb-8">
-                            <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Submit your application</h3>
-                            <p className="text-slate-500 dark:text-slate-400 mt-2">Fill out the details below and attach your latest CV.</p>
+                    <div className="relative z-10">
+                        <div className="mb-8 text-center">
+                            <h3 className="text-3xl font-black text-slate-900 dark:text-white tracking-tight">Submit your application</h3>
+                            <p className="text-slate-500 dark:text-slate-400 mt-2 text-lg">Fill out the details below and attach your latest CV.</p>
                         </div>
 
                         {/* Form configured with Getform.io endpoint provided by the user. */}

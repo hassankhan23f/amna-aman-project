@@ -87,15 +87,7 @@ export function Footer() {
                             </button>
                         </div>
 
-                        <div className="mt-8 p-4 rounded-2xl bg-slate-800/50 border border-slate-700/50">
-                            <div className="flex items-center gap-3 mb-2">
-                                <div className="w-8 h-8 rounded-full bg-orange-500/20 flex items-center justify-center">
-                                    <Heart size={16} className="text-orange-400" />
-                                </div>
-                                <span className="text-sm font-semibold text-white">5,000+ Lives Impacted</span>
-                            </div>
-                            <p className="text-xs text-slate-500">Across Pakistan through technology, education, and community workshops.</p>
-                        </div>
+
                     </div>
                 </div>
             </div>

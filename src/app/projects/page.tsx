@@ -7,6 +7,21 @@ import Image from "next/image"
 export default function ProjectsPage() {
     const projects = [
         {
+            title: "NUTECH Job Fair 2026",
+            description: "Engaging with talented students, conducting interviews, and showcasing our inclusive vision.",
+            fullDescription: `The Amna Aman Organization proudly participated in the NUTECH Job Fair 2026. 
+
+            Our team set up a dedicated stall, engaging with hundreds of brilliant students, conducting on-the-spot interviews, and discussing meaningful opportunities to contribute to Pakistan's inclusive tech ecosystem. 
+
+            It was an incredible experience to witness the energy and talent of the youth, and we are excited to welcome passionate individuals to join our movement for accessibility and tech-driven inclusion.`,
+            icon: Users,
+            images: [
+                "/images/jobfair1.jpg",
+                "/images/jobfair2.jpg",
+                "/images/jobfair3.jpg"
+            ]
+        },
+        {
             title: "Indus AI Week 2026",
             description: "Hassan Khan representing Amna Aman Project as CTO at Indus AI Week 2026 🇵🇰",
             fullDescription: `Indus AI Week stands as a national platform bringing together policy, innovation, talent, and investment — and being part of this ecosystem reflects our commitment to building meaningful, inclusive technology.
